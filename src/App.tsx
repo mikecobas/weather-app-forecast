@@ -1,9 +1,12 @@
-import { Button } from "@/components/ui/button"
+import { ThemeProvider } from "@/components/theme-provider"
+import Home from "./page/Home"
 
-export default function Home() {
+function App() {
   return (
-    <div>
-      <Button>Click me</Button>
-    </div>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <Home />
+    </ThemeProvider>
   )
 }
+
+export default App
